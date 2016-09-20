@@ -1,0 +1,5 @@
+# Prerequisites
+- Docker
+- Docker Compose
+
+
