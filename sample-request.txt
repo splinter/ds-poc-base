@@ -1,0 +1,2 @@
+curl -X POST http://172.17.0.4:8280/stockquote/getQuote -d '{"name":"WSO2"}' -H "Content-Type:application/json"
+

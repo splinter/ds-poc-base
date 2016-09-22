@@ -10,6 +10,8 @@ esb:
  container_name:  esb
  links:
   - analytics
+ ports:
+  - "8280:8280"
 
 grafana:
  build: grafana
