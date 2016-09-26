@@ -1,21 +1,21 @@
-analytics:
- build: analytics
- container_name: analytics
- ports:
-  - "7712:7712"
-  - "9444:9444"
+#analytics:
+# build: analytics
+# container_name: analytics
+# ports:
+#  - "7712:7712"
+#  - "9444:9444"
 
-esb:
- build: esb
- container_name:  esb
- links:
-  - analytics
- ports:
-  - "8280:8280"
+#esb:
+# build: esb
+# container_name:  esb
+# links:
+#  - analytics
+# ports:
+#  - "8280:8280"
 
-#grafana:
-# build: grafana
-# container_name: grafana
-# tty: true
+grafana:
+ build: grafana
+ container_name: grafana
+ tty: true
 # links:
 #  - analytics
