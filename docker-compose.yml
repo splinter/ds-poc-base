@@ -13,9 +13,9 @@ esb:
  ports:
   - "8280:8280"
 
-grafana:
- build: grafana
- container_name: grafana
- tty: true
- links:
-  - analytics
+#grafana:
+# build: grafana
+# container_name: grafana
+# tty: true
+# links:
+#  - analytics

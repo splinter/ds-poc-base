@@ -9,6 +9,25 @@ GF_SERVER_PROTOCOL=${GF_SERVER_PROTOCOL:-http}
 local_ip=localhost
 #$(ip route get 1 | awk '{print $NF;exit}')
 
+mkdir /data
+mkdir /data/plugins
+
+echo "Downloading and installing custom panel"
+wget https://github.com/splinter/grafana-mypanel/archive/master.zip
+unzip master.zip
+mv grafana-mypanel-master grafana-mypanel
+cp grafana-mypanel /data/plugins -r
+rm master.zip
+echo "Finished installing custom panel"
+
+echo "Downloading and installing custom app"
+wget https://github.com/splinter/grafana-myapp/archive/master.zip
+unzip master.zip
+mv grafana-myapp-master grafana-myapp
+cp grafana-myapp  /data/plugins -r
+rm master.zip
+echo "Finished installing custom app"
+
 # Script adapted from https://github.com/kubernetes/heapster/blob/master/grafana/run.sh
 set -m
 echo "Starting the Garfana Server "
